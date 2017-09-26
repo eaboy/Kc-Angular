@@ -2,12 +2,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { ListaContactosComponent } from './lista-contactos/lista-contactos.component';
 
 // Usamos el decoredor 'NgModule' para que la clase decorada se comporte como un módulo
 @NgModule({
   // En el metadato 'declarations' indicamos todos los componentes, pipes y directivas de mi aplicación
   declarations: [
-    AppComponent
+    AppComponent,
+    ListaContactosComponent
   ],
   // En el metadato 'import' indicamos todos aquellos módulos de los cuales mi aplicación depende
   imports: [
