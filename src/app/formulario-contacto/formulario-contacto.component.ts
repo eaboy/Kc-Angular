@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { Component, Output, EventEmitter } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Contacto } from '../contacto';
 
 @Component({
   selector: 'app-formulario-contacto',
@@ -10,6 +11,8 @@ export class FormularioContactoComponent {
 
   formulario: FormGroup;
 
+  @Output() botonGuardarPulsado = new EventEmitter<Contacto>(); 
+
   // Inyectamos como dependencia 'FormBuilder', con esta clase podemos crear nuevos 'FormGroup', indicando todas las propiedades que queremos recoger del formulario Html
   constructor(private _formBuilder: FormBuilder) {
     this.crearFormulario();
@@ -19,15 +22,16 @@ export class FormularioContactoComponent {
 
     // Para crear un nuevo 'FormGroup' debemos indicar en un bojeto JSON las prropiedades que recogemos del formulario Html.
     this.formulario = this._formBuilder.group({
-      nombre: '',
-      apellidos: ''
+      nombre: ['', Validators.required],
+      apellidos: ['', Validators.required]
     });
   }
 
-  guardarContacto(): void {
+  notificarGuardadoContacto(): void {
 
     // Tenemos disponible los valores que el usuario indica en un formulario a través de la propiedad 'value' del 'FormGroup'.
-    console.log(this.formulario.value);
+    const contacto: Contacto = this.formulario.value as Contacto;
+    this.botonGuardarPulsado.emit(contacto);
   }
 
 }

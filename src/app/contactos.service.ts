@@ -22,4 +22,8 @@ export class ContactosService {
   eliminarContacto(contacto: Contacto): void {
     this._nombres = this._nombres.filter(n => n.id !== contacto.id);
   }
+
+  agregarContacto(contacto: Contacto): void {
+    this._nombres.push(contacto);
+  }
 }
