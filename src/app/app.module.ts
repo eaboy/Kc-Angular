@@ -1,3 +1,4 @@
+import { AppRoutingModule } from './app-routing/app-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -6,6 +7,8 @@ import { ContactosService } from './contactos.service';
 import { AppComponent } from './app.component';
 import { ListaContactosComponent } from './lista-contactos/lista-contactos.component';
 import { FormularioContactoComponent } from './formulario-contacto/formulario-contacto.component';
+import { RutaListaComponent } from './ruta-lista/ruta-lista.component';
+import { RutaFormularioComponent } from './ruta-formulario/ruta-formulario.component';
 
 // Usamos el decoredor 'NgModule' para que la clase decorada se comporte como un módulo
 @NgModule({
@@ -13,12 +16,15 @@ import { FormularioContactoComponent } from './formulario-contacto/formulario-co
   declarations: [
     AppComponent,
     ListaContactosComponent,
-    FormularioContactoComponent
+    FormularioContactoComponent,
+    RutaListaComponent,
+    RutaFormularioComponent
   ],
   // En el metadato 'import' indicamos todos aquellos módulos de los cuales mi aplicación depende
   imports: [
     BrowserModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AppRoutingModule
   ],
   // En el metadato 'providers' indicamos todos aquellos proveedores de clase o valores que puedan ser inyectados
   providers: [
