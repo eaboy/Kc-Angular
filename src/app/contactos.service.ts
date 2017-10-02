@@ -6,12 +6,12 @@ import { Contacto } from './contacto';
 export class ContactosService {
 
   private _nombres: Contacto[] = [
-    new Contacto(1, 'Steve','Jobs'),
-    new Contacto(2, 'Steve','Wozniak'),
-    new Contacto(3, 'Bill','Gates'),
-    new Contacto(4, 'Sundar','Pichai'),
+    new Contacto(1, 'Steve','Jobs', '566 555 666', 'steve.j@apple.com'),
+    new Contacto(2, 'Steve','Wozniak', '566 555 55', 'steve.w@apple.com'),
+    new Contacto(3, 'Bill','Gates', null, 'bill.g@microsoft.com'),
+    new Contacto(4, 'Sundar','Pichai', '566 555 777', null),
     new Contacto(5, 'Elon','Musk'),
-    new Contacto(6, 'Bob','Esponja')
+    new Contacto(6, 'Bob','Esponja', '111 111 111', 'bob.e@bikkinib.com')
   ];
 
   obtenerContactos(): Contacto[] {
