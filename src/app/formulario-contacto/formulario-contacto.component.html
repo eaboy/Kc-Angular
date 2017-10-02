@@ -1,16 +1,34 @@
 <!-- Enlazamos un 'FormGroup' al elemento <fomr> de Html gracias a la directiva FormGroup. En el caso de querer enlazar propiedades del modelo del 'FormGroup' a los elementos <input> del formulario, lo haremos usando la directiva 'formControlName'. -->
 <form [formGroup]="formulario" (ngSubmit)="notificarGuardadoContacto()">
-  <div>
-    <label for="">Nombre</label>
-    <input type="text" formControlName="nombre">
-    <span *ngIf="formulario.get('nombre').touched && formulario.get('nombre').invalid">El nombre del contacto es obligatorio</span>
+
+  <div class="row">
+    <div class="offset-by-three six columns">
+      <label for="">Nombre</label>
+      <input 
+      type="text"
+      formControlName="nombre"
+      class="u-full-width">
+      <span *ngIf="formulario.get('nombre').touched && formulario.get('nombre').invalid">El nombre del contacto es obligatorio</span>
+    </div>
   </div>
-  <div>
-    <label for="">Apellidos</label>
-    <input type="text" formControlName="apellidos">
-    <span *ngIf="formulario.get('apellidos').touched && formulario.get('apellidos').invalid">Los apellidos del contacto son obligatorio</span>
+  <div class="row">
+    <div class="offset-by-three six columns">
+      <label for="">Apellidos</label>
+      <input
+      type="text"
+      formControlName="apellidos"
+      class="u-full-width">
+      <span *ngIf="formulario.get('apellidos').touched && formulario.get('apellidos').invalid">Los apellidos del contacto son obligatorio</span>
+    </div>
   </div>
-  <div>
-    <button type="submit" [disabled]="formulario.invalid">Guadar contacto</button>
+  <div class="row">
+    <div class="offset-by-three six columns">
+      <button 
+      type="submit" 
+      [disabled]="formulario.invalid"
+      class="u-full-width button-primary">
+      Guadar contacto
+      </button>
+    </div>
   </div>
 </form>

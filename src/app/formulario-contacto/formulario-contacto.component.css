@@ -5,3 +5,8 @@ input.ng-touched.ng-valid {
 input.ng-touched.ng-invalid {
     border: 1px solid red;
 }
+
+button:disabled {
+    background-color: lightgray;
+    border: 1px solid gray;
+}

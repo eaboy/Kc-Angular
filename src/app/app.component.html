@@ -1,19 +1,21 @@
-<header>
-  <h1>Agenda</h1>
-</header>
-<!-- Barra de navegación.
-     En la directiva 'routerLink' indicamos la ruta a la cual queremos navegar al pulsar sobre dicho enlace. Esta ruta tiene que estar definida en el módulo de routing. -->
-<nav>
-  <ul>
-    <li>
-      <a routerLink="/lista-contactos">Mis Contactos</a>
-    </li>
-    <li>
-        <a routerLink="/nuevo-contacto">Nuevo Contacto</a>
+<div class="container">
+  <header>
+    <h1>Agenda</h1>
+  </header>
+  <!-- Barra de navegación.
+      En la directiva 'routerLink' indicamos la ruta a la cual queremos navegar al pulsar sobre dicho enlace. Esta ruta tiene que estar definida en el módulo de routing. -->
+  <nav>
+    <ul>
+      <li>
+        <a routerLink="/lista-contactos" routerLinkActive="seleccionado">Mis Contactos</a>
       </li>
-  </ul>
-</nav>
+      <li>
+          <a routerLink="/nuevo-contacto" routerLinkActive="seleccionado">Nuevo Contacto</a>
+        </li>
+    </ul>
+  </nav>
 
-<!-- Zona dinámica -->
+  <!-- Zona dinámica -->
 
-<router-outlet></router-outlet>
+  <router-outlet></router-outlet>
+</div>
