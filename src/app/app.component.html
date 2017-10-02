@@ -1,10 +1,19 @@
 <header>
   <h1>Agenda</h1>
 </header>
+<!-- Barra de navegación.
+     En la directiva 'routerLink' indicamos la ruta a la cual queremos navegar al pulsar sobre dicho enlace. Esta ruta tiene que estar definida en el módulo de routing. -->
+<nav>
+  <ul>
+    <li>
+      <a routerLink="/lista-contactos">Mis Contactos</a>
+    </li>
+    <li>
+        <a routerLink="/nuevo-contacto">Nuevo Contacto</a>
+      </li>
+  </ul>
+</nav>
 
 <!-- Zona dinámica -->
 
 <router-outlet></router-outlet>
-<app-formulario-contacto (botonGuardarPulsado)="crearContacto($event)"></app-formulario-contacto>
-<!-- Para evaluar el valor de un atributo previamente a su asignación debemos poner entre corchetes el nombre del atributo. Si queremos recoger los datos que vienen dados en un evento utilizamos la palabra reservada '$event' -->
-<app-lista-contactos [contactos]="nombres" (botonEliminarPulsado)="eliminarContacto($event)"></app-lista-contactos>
