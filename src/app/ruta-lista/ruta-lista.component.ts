@@ -42,5 +42,9 @@ export class RutaListaComponent implements OnInit {
       verDetalles(nombre: Contacto): void {
         this.contactoSeleccionado = nombre;
       }
+
+      verPerfil(ruta): void {
+        window.open(ruta, '_blank');
+      }
     
     }
