@@ -12,6 +12,7 @@ import { RutaFormularioComponent } from './ruta-formulario/ruta-formulario.compo
 import { DetallesContactoComponent } from './detalles-contacto/detalles-contacto.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DatosContactoPipe } from './datos-contacto.pipe';
+import { OrdenarContactosPipe } from './ordenar-contactos.pipe';
 
 // Usamos el decoredor 'NgModule' para que la clase decorada se comporte como un módulo
 @NgModule({
@@ -23,7 +24,8 @@ import { DatosContactoPipe } from './datos-contacto.pipe';
     RutaListaComponent,
     RutaFormularioComponent,
     DetallesContactoComponent,
-    DatosContactoPipe
+    DatosContactoPipe,
+    OrdenarContactosPipe
   ],
   // En el metadato 'import' indicamos todos aquellos módulos de los cuales mi aplicación depende
   imports: [

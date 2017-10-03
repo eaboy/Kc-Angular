@@ -8,6 +8,8 @@ import { Contacto } from '../contacto';
 })
 export class ListaContactosComponent {
 
+  orden: string = 'asc';
+
   // Con el decorador 'Output' exponemos un evento para que un componente padre pueda suscribirse a él. Además este evento debe ser un 'EventEmitter' del tipo deseado.
   @Output() botonEliminarPulsado = new EventEmitter<Contacto>();
   @Output() contactoSeleccionado = new EventEmitter<Contacto>();
@@ -23,6 +25,10 @@ export class ListaContactosComponent {
 
   notificarSeleccionContacto(contacto: Contacto): void {
     this.contactoSeleccionado.emit(contacto);
+  }
+
+  cambiarOrden(): void {
+    this.orden = this.orden === 'asc' ? 'desc' : 'asc';
   }
 
 }
