@@ -16,8 +16,9 @@ export class RutaFormularioComponent {
   ) { }
   
   crearContacto(contacto: Contacto): void {
-    this._contactosService.agregarContacto(contacto);
-    this._router.navigate(['/lista-contactos']);
+    this._contactosService
+    .agregarContacto(contacto)
+    .subscribe(() => this._router.navigate(['/lista-contactos']));
   }
 
 }

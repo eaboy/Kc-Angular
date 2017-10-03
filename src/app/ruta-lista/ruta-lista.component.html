@@ -3,7 +3,7 @@
     <div class="six columns">
         <!-- Para evaluar el valor de un atributo previamente a su asignación debemos poner entre corchetes el nombre del atributo. Si queremos recoger los datos que vienen dados en un evento utilizamos la palabra reservada '$event' -->
         <app-lista-contactos
-            [contactos]="nombres"
+            [contactos]="contactos$ | async"
             (botonEliminarPulsado)="eliminarContacto($event)"
             (contactoSeleccionado)="verDetalles($event)">
         </app-lista-contactos>
