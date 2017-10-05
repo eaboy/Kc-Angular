@@ -23,7 +23,11 @@ export class FormularioContactoComponent {
     // Para crear un nuevo 'FormGroup' debemos indicar en un bojeto JSON las prropiedades que recogemos del formulario Html.
     this.formulario = this._formBuilder.group({
       nombre: ['', Validators.required],
-      apellidos: ['', Validators.required]
+      apellidos: ['', Validators.required],
+      movil: '',
+      email: '',
+      facebook: '',
+      twitter: '' 
     });
   }
 
