@@ -4,7 +4,6 @@
         <!-- Para evaluar el valor de un atributo previamente a su asignación debemos poner entre corchetes el nombre del atributo. Si queremos recoger los datos que vienen dados en un evento utilizamos la palabra reservada '$event' -->
         <app-lista-contactos
             [contactos]="contactos$ | async"
-            (botonEliminarPulsado)="eliminarContacto($event)"
             (contactoSeleccionado)="verDetalles($event)">
         </app-lista-contactos>
     </div>
@@ -13,7 +12,8 @@
         <app-detalles-contacto
             [contacto]="contactoSeleccionado"
             (botonFacebookPulsado)="verPerfil($event)"
-            (botonTwitterPulsado)="verPerfil($event)">
+            (botonTwitterPulsado)="verPerfil($event)"
+            (botonEliminarPulsado)="eliminarContacto($event)">
         </app-detalles-contacto>
     </div>
 </div>

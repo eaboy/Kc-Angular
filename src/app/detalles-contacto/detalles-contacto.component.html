@@ -3,10 +3,10 @@
   <hr>
 
   <!-- Redes Sociales -->
-  <button *ngIf="contacto.facebook" (click)="notificarNavegacionFacebook()">
+  <button class="social" *ngIf="contacto.facebook" (click)="notificarNavegacionFacebook()">
     <i class="fa fa-facebook-square" aria-hidden="true"></i>
   </button>
-  <button *ngIf="contacto.twitter" (click)="notificarNavegacionTwitter()">
+  <button class="social" *ngIf="contacto.twitter" (click)="notificarNavegacionTwitter()">
     <i class="fa fa-twitter-square" aria-hidden="true"></i>
   </button>
 
@@ -16,4 +16,8 @@
   <div>
     {{ contacto | datosContacto}}
   </div>
+  <!-- La suscripción a eventos se hace poniendo entre paréntesis el nombre del mismo -->
+  <button class="eliminar u-full-width" (click)="notificarEliminacionContacto()">
+    <i class="fa fa-trash" aria-hidden="true"></i>
+    Eliminar</button>
 </div>

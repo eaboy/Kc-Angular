@@ -1,10 +1,18 @@
-button {
+:host>div {
+    text-align: center;
+}
+
+.social {
     border: none;
     margin: 0;
     padding: 0;
     font-size: 48px;
 }
 
-button:hover {
+.social:hover {
     color: #1EAED8;
+}
+
+.eliminar {
+    margin: 20px 0;
 }

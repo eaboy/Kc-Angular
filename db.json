@@ -45,11 +45,6 @@
       "apellidos": "Esponja",
       "movil": "123 123 123",
       "email": "bob.esponja@dibus.es"
-    },
-    {
-      "nombre": "Patricio",
-      "apellidos": "Estrella",
-      "id": 7
     }
   ]
 }

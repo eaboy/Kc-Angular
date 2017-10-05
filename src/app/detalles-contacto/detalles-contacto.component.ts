@@ -11,6 +11,7 @@ export class DetallesContactoComponent{
   @Input() contacto: Contacto;
   @Output() botonFacebookPulsado = new EventEmitter<string>();
   @Output() botonTwitterPulsado = new EventEmitter<string>();
+  @Output() botonEliminarPulsado = new EventEmitter<Contacto>();
   
   notificarNavegacionFacebook(): void {
     this.botonFacebookPulsado.emit(this.construirRutaFacebook());
@@ -19,7 +20,12 @@ export class DetallesContactoComponent{
   notificarNavegacionTwitter(): void {
     this.botonTwitterPulsado.emit(this.construirRutaTwitter());
   }
-  
+
+  // Notificamos datos al componente padre gracias a la función 'emit' de nuestro 'EventEmitter'
+  notificarEliminacionContacto(): void {
+    this.botonEliminarPulsado.emit(this.contacto);
+  } 
+   
   private construirRutaFacebook(): string {
       return this.contacto.facebook 
       ? `https://www.facebook.com/${this.contacto.facebook}`
@@ -31,5 +37,6 @@ export class DetallesContactoComponent{
       ? `https://www.twitter.com/${this.contacto.twitter}`
       : null;
   }  
+
 
 }
